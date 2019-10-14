@@ -10,18 +10,10 @@ GCD of 1234 and 5678 is 2
 '''
 
 def gcd(m,n):
-     #Euclid's algorithm to find gcd is used
-        if m<n:
-            temp=m
-            m=n
-            n=temp
+        if m==0:
+             return n
+        return(gcd(n%m,m))
 
-        rem=m%n #rem to store reminder
-        while(rem!=0):
-            rem=m%n
-            m=n
-            n=rem
-        return m
 
 #drive code
 print(" GCD OF TWO NUMBERS")
